@@ -50,7 +50,16 @@
 | Windows 11 Notification Center Styler | m417z |
 | Taskbar Dock Animation | Ph0en1x-dev |
 
-### 2. Применить пресет
+### 2. Применить пресет — автоматически (рекомендуется)
+
+Запусти `install-all.bat` от имени администратора — он:
+1. Установит Windhawk, komorebi и whkd через winget
+2. Разложит конфиги komorebi
+3. Подскажет, какие 4 мода доустановить в Windhawk (ссылки откроются сами)
+4. Импортирует все пресеты и перезапустит оболочку
+5. Создаст автозапуск komorebi
+
+Ручной способ:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\backup-windhawk.ps1   # бэкап текущих настроек
