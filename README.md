@@ -4,7 +4,16 @@
 
 > One-line English: a ready-made Windows 11 rice preset — glassy DockLike taskbar, translucent Mocha Glass Start menu & notification center, komorebi tiling, themed wallpapers & cursors.
 
-![Превью](img/preview.png)
+![Превью](img/hero-desktop.png)
+
+## Скриншоты
+
+| | |
+|---|---|
+| ![Рабочий стол с доком](img/hero-desktop.png) | ![Меню «Пуск»](img/start-menu.png) |
+| ![Центр уведомлений](img/notification-center.png) | ![Док крупным планом](img/dock.png) |
+
+*Прозрачные часы и трей:* ![Трей](img/tray.png)
 
 ## Что внутри
 
