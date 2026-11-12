@@ -1,25 +1,42 @@
-# fln Windows Customization Pack
+# ✨ Perfect Win11 — Mocha Glass Rice
 
 Готовый пресет кастомизации Windows 11 (24H2+): стеклянный таскбар-док, прозрачное меню «Пуск» и центр уведомлений в стиле **Mocha Glass**, тайлинг-менеджер **komorebi**, пакет обоев и курсоров.
 
 > One-line English: a ready-made Windows 11 rice preset — glassy DockLike taskbar, translucent Mocha Glass Start menu & notification center, komorebi tiling, themed wallpapers & cursors.
 
-![Превью](img/hero-desktop.png)
+## 🖼 Скриншоты
 
-## Скриншоты
+### Рабочий стол
 
-| | |
-|---|---|
-| ![Рабочий стол с доком](img/hero-desktop.png) | ![Меню «Пуск»](img/start-menu.png) |
-| ![Центр уведомлений](img/notification-center.png) | ![Док крупным планом](img/dock.png) |
+<p align="center">
+  <img src="img/hero-desktop.png" width="85%" alt="Рабочий стол с доком">
+</p>
 
-*Прозрачные часы и трей:* ![Трей](img/tray.png)
+### Меню «Пуск» — прозрачное, с зонами без линий
+
+<p align="center">
+  <img src="img/start-menu.png" width="60%" alt="Меню «Пуск»">
+</p>
+
+### Центр уведомлений — Mocha Glass
+
+<p align="center">
+  <img src="img/notification-center.png" width="38%" alt="Центр уведомлений">
+</p>
+
+### Док и прозрачный трей
+
+<p align="center">
+  <img src="img/dock.png" width="46%" alt="Док">
+  <img src="img/tray.png" width="46%" alt="Прозрачный трей">
+</p>
 
 ## Что внутри
 
 ```
 222/
-├── explorer.bat                  # fln explorer tweaker (самоповышение + PowerShell)
+├── install-all.bat                # установка всего в один клик
+├── explorer.bat                   # fln explorer tweaker (самоповышение + PowerShell)
 ├── win-tweaker.bat               # fln system tweaker
 ├── autounattend.xml              # автоматическая установка Windows с пресетом
 ├── wallpapers/                   # обои по темам: Everforest, Kanagawa, TokyoNight,
