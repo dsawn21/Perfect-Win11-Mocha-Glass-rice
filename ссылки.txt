@@ -1,0 +1,7 @@
+создать свой файл ответов: https://schneegans.de/windows/unattend-generator/
+скачать программы одним архивом: https://ninite.com/
+менеджер браузерных тем sine: https://github.com/CosmoCreeper/Sine
+accentColorizer: https://github.com/krlvm/AccentColorizer
+accentColorizer11: https://github.com/krlvm/AccentColorizer-E11
+fluentFlyout: https://fluentflyout.com/
+windhawk: https://windhawk.net/
