@@ -13,13 +13,14 @@ $files = @(
     'taskbar-styler.reg',
     'start-menu-styler.reg',
     'notification-center-styler.reg',
+    'file-explorer-styler.reg',
     'taskbar-dock-animation.reg'
 )
 
 Write-Host '=== fln Windhawk preset ===' -ForegroundColor Cyan
 
 $installed = Get-ChildItem $modsRoot -ErrorAction SilentlyContinue | Select-Object -ExpandProperty PSChildName
-$required = @('windows-11-taskbar-styler','windows-11-start-menu-styler','windows-11-notification-center-styler','taskbar-dock-animation')
+$required = @('windows-11-taskbar-styler','windows-11-start-menu-styler','windows-11-notification-center-styler','windows-11-file-explorer-styler','taskbar-dock-animation')
 $missing = $required | Where-Object { $installed -notcontains $_ }
 if ($missing) {
     Write-Warning "Mods not installed: $($missing -join ', ')"

@@ -46,6 +46,7 @@
 │   ├── taskbar-styler.reg              # DockLike-док, прозрачные часы, click-through
 │   ├── start-menu-styler.reg           # прозрачное «Пуск» (TranslucentStartMenu + правки)
 │   ├── notification-center-styler.reg  # Mocha Glass для центра уведомлений
+│   ├── file-explorer-styler.reg        # Mocha Glass для проводника (стекло, акцент-вкладки)
 │   └── taskbar-dock-animation.reg      # мягкие прыжки значков (macOS-стиль)
 ├── komorebi/                     # конфиги тайлинг-менеджера
 │   ├── komorebi.json                   # раскладки, рамки Catppuccin Mocha
@@ -74,6 +75,7 @@
 | Windows 11 Taskbar Styler | m417z |
 | Windows 11 Start Menu Styler | m417z |
 | Windows 11 Notification Center Styler | m417z |
+| Windows 11 File Explorer Styler | m417z |
 | Taskbar Dock Animation | Ph0en1x-dev |
 
 ### 2. Применить пресет — автоматически (рекомендуется)
@@ -110,6 +112,7 @@ komorebic start --whkd
 - **Таскбар-док**: плавающая центральная панель, стекло с блюром, прозрачные часы, сквозные клики по пустым местам (`clickThroughTaskbar`), кастомная кнопка Пуск, углы 8–12 px
 - **Меню «Пуск»**: прозрачный акрил, разделение зон (поиск / закреплено / все / профиль) пустым местом без линий, скругления 12 px
 - **Центр уведомлений «Mocha Glass»**: жидкое стекло на всех панелях (блюр 30, тонировка 40%), скругления 18 px, акцент `#89b4fa` (Catppuccin Mocha), скруглённая обложка медиаплеера
+- **Проводник**: акриловый фон всего окна, стеклянные панель вкладок/адреса/командная панель, скруглённые вкладки с Mocha-акцентом `#89b4fa` на активной вкладке, стеклянные всплывашки
 - **Анимации дока**: мягкое масштабирование 115% с лёгким прыжком, системные кнопки не анимируются
 - **Komorebi**: BSP-тайлинг с рамками Mocha и хоткеями
 

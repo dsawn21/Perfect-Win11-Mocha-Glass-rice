@@ -51,6 +51,7 @@ $required = @(
     'windows-11-taskbar-styler',
     'windows-11-start-menu-styler',
     'windows-11-notification-center-styler',
+    'windows-11-file-explorer-styler',
     'taskbar-dock-animation'
 )
 $installed = (Get-ChildItem $modsRoot -ErrorAction SilentlyContinue).PSChildName
