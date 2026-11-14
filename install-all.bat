@@ -52,6 +52,7 @@ $required = @(
     'windows-11-start-menu-styler',
     'windows-11-notification-center-styler',
     'windows-11-file-explorer-styler',
+    'translucent-windows',
     'taskbar-dock-animation'
 )
 $installed = (Get-ChildItem $modsRoot -ErrorAction SilentlyContinue).PSChildName
@@ -79,6 +80,15 @@ Get-ChildItem $presets -Filter '*.reg' | ForEach-Object {
     Write-Host "    importing $($_.Name)" -NoNewline
     reg import $_.FullName
     Write-Host ' OK' -ForegroundColor Green
+}
+
+Step 'Forcing mods to reload settings'
+$changeTime = [int][double]::Parse((Get-Date -UFormat %s))
+foreach ($m in $required) {
+    $key = Join-Path $modsRoot $m
+    if (Test-Path $key) {
+        New-ItemProperty -Path $key -Name 'SettingsChangeTime' -Value $changeTime -PropertyType DWord -Force | Out-Null
+    }
 }
 
 Step 'Restarting explorer and shell hosts'

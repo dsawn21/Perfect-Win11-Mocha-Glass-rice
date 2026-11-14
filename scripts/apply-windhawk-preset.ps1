@@ -1,6 +1,7 @@
 # fln Windhawk Preset - apply script
 # Requires: Windhawk installed, mods installed (taskbar-styler, start-menu-styler,
-# notification-center-styler, taskbar-dock-animation). Run the backup script first.
+# notification-center-styler, file-explorer-styler, translucent-windows,
+# taskbar-dock-animation). Run the backup script first.
 
 #Requires -RunAsAdministrator
 
@@ -14,13 +15,14 @@ $files = @(
     'start-menu-styler.reg',
     'notification-center-styler.reg',
     'file-explorer-styler.reg',
+    'translucent-windows.reg',
     'taskbar-dock-animation.reg'
 )
 
 Write-Host '=== fln Windhawk preset ===' -ForegroundColor Cyan
 
 $installed = Get-ChildItem $modsRoot -ErrorAction SilentlyContinue | Select-Object -ExpandProperty PSChildName
-$required = @('windows-11-taskbar-styler','windows-11-start-menu-styler','windows-11-notification-center-styler','windows-11-file-explorer-styler','taskbar-dock-animation')
+$required = @('windows-11-taskbar-styler','windows-11-start-menu-styler','windows-11-notification-center-styler','windows-11-file-explorer-styler','translucent-windows','taskbar-dock-animation')
 $missing = $required | Where-Object { $installed -notcontains $_ }
 if ($missing) {
     Write-Warning "Mods not installed: $($missing -join ', ')"
@@ -36,6 +38,15 @@ foreach ($f in $files) {
         Write-Host ' OK' -ForegroundColor Green
     } else {
         Write-Warning "Missing: $path"
+    }
+}
+
+Write-Host 'Forcing mods to reload settings...'
+$changeTime = [int][double]::Parse((Get-Date -UFormat %s))
+foreach ($m in $required) {
+    $key = Join-Path $modsRoot $m
+    if (Test-Path $key) {
+        New-ItemProperty -Path $key -Name 'SettingsChangeTime' -Value $changeTime -PropertyType DWord -Force | Out-Null
     }
 }
 
